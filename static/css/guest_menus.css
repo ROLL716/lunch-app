@@ -123,9 +123,9 @@ body {
 }
 
 .category-btn {
-    background: rgba(255, 255, 255, 0.2);
-    color: white;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    background: #87ceeb; /* 水色 */
+    color: #ffffff; /* 白文字 */
+    border: 2px solid #5dade2; /* 明るい青の境界線 */
     padding: 0.75rem 1.5rem;
     border-radius: 25px;
     font-size: 0.95rem;
@@ -143,10 +143,9 @@ body {
 }
 
 .category-btn.active {
-    background: white;
-    color: #667eea;
-    border-color: white;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background: #5dade2; /* アクティブ時の濃い青 */
+    color: #ffffff; /* 白文字 */
+    border-color: #87ceeb; /* 水色の境界線 */
 }
 
 /* ========================================
