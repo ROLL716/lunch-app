@@ -68,14 +68,20 @@
                     </div>
 
                     <!-- 日付フィルター -->
-                    <div class="filter-group">
-                        <label for="startDate">開始日:</label>
-                        <input type="date" id="startDate" class="form-control">
-                    </div>
-
-                    <div class="filter-group">
-                        <label for="endDate">終了日:</label>
-                        <input type="date" id="endDate" class="form-control">
+                    <div class="filter-group filter-date-range">
+                        <label class="date-range-label">期間</label>
+                        <div class="date-range-wrapper">
+                            <div class="date-input-group">
+                                <label for="startDate" class="sr-only">開始日</label>
+                                <input aria-label="開始日" type="date" id="startDate" class="form-control date-input">
+                                <div class="date-caption">開始日</div>
+                            </div>
+                            <div class="date-input-group">
+                                <label for="endDate" class="sr-only">終了日</label>
+                                <input aria-label="終了日" type="date" id="endDate" class="form-control date-input">
+                                <div class="date-caption">終了日</div>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- 並び順 -->
@@ -89,10 +95,10 @@
                     </div>
 
                     <!-- フィルターボタン -->
-                    <div class="filter-group">
-                        <button id="clearSearchBtn" class="btn btn-outline-primary" style="display: none;">検索クリア</button>
-                        <button id="clearDateBtn" class="btn btn-outline-primary" style="display: none;">日付クリア</button>
-                        <button id="resetFiltersBtn" class="btn btn-outline-secondary">フィルターリセット</button>
+                    <div class="filter-group filter-actions">
+                        <button id="applyFiltersBtn" class="btn btn-primary">検索</button>
+                        <button id="clearDateBtn" type="button" class="btn btn-outline-primary" style="display: none;">日付クリア</button>
+                        <button id="resetFiltersBtn" class="btn btn-outline-secondary">リセット</button>
                     </div>
                 </div>
 
