@@ -19,26 +19,39 @@
         </header>
 
         <!-- フィルター -->
-        <div class="orders-filters">
-                <div class="filter-group">
-                    <label for="statusFilter">ステータスで絞り込み</label>
-                    <select id="statusFilter" class="form-control">
-                        <option value="">全ての注文</option>
-                        <option value="pending">注文受付</option>
-                        <option value="ready">準備完了</option>
-                        <option value="completed">受取完了</option>
-                        <option value="cancelled">キャンセル</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label for="dateFromFilter">期間で絞り込み(開始日)</label>
-                    <input type="date" id="dateFromFilter" class="form-control">
-                </div>
-                <div class="filter-group">
-                    <label for="dateToFilter">期間で絞り込み(終了日)</label>
-                    <input type="date" id="dateToFilter" class="form-control">
+        <div class="orders-filters" role="region" aria-label="注文フィルター">
+            <div class="filter-group">
+                <label for="statusFilter">ステータス</label>
+                <select id="statusFilter" class="form-control">
+                    <option value="">すべて</option>
+                    <option value="pending">注文受付</option>
+                    <option value="ready">準備完了</option>
+                    <option value="completed">受取完了</option>
+                    <option value="cancelled">キャンセル</option>
+                </select>
+            </div>
+
+            <div class="filter-group date-range">
+                <label class="date-range-label">期間</label>
+                <div class="date-range-wrapper">
+                    <div class="date-input-group">
+                        <label for="dateFromFilter" class="sr-only">開始日</label>
+                        <input aria-label="開始日" placeholder="開始日" title="開始日" type="date" id="dateFromFilter" class="form-control date-input">
+                        <div class="date-caption">開始日</div>
+                    </div>
+                    <div class="date-input-group">
+                        <label for="dateToFilter" class="sr-only">終了日</label>
+                        <input aria-label="終了日" placeholder="終了日" title="終了日" type="date" id="dateToFilter" class="form-control date-input">
+                        <div class="date-caption">終了日</div>
+                    </div>
                 </div>
             </div>
+
+            <div class="filter-actions">
+                <button id="applyFiltersBtn" class="btn btn-primary">検索</button>
+                <button id="clearFiltersBtn" type="button" class="btn btn-outline-secondary">クリア</button>
+            </div>
+        </div>
 
             <!-- 注文リスト -->
             <div id="ordersList" class="orders-list">

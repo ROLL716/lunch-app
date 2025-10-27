@@ -1,10 +1,10 @@
 /**
- * 注斁E��琁E��面 スタイルシーチE
+ * 注斁E��琁E��面 スタイルシーチE
  * 
- * カード型レイアウト、レスポンシブデザイン、スチE�Eタスバッジを定義
+ * カード型レイアウト、レスポンシブデザイン、スチE�Eタスバッジを定義
  */
 
-/* ===== ペ�EジレイアウチE===== */
+/* ===== ペ�EジレイアウチE===== */
 
 .main-content {
     padding: 2rem 0;
@@ -19,7 +19,7 @@
     padding: 0 1rem;
 }
 
-/* ===== ペ�Eジヘッダー (ダチE��ュボ�Eドと統一) ===== */
+/* ===== ペ�Eジヘッダー (ダチE��ュボ�Eドと統一) ===== */
 
 .store-orders-header {
     margin-bottom: 2rem;
@@ -127,7 +127,7 @@
     color: #6f42c1;
 }
 
-/* スチE�Eタスバッジ */
+/* スチE�Eタスバッジ */
 .badge-status {
     padding: 0.4rem 0.9rem;
     border-radius: 20px;
@@ -137,7 +137,7 @@
     letter-spacing: 0.5px;
 }
 
-/* ===== 4スチE�EタスシスチE��用バッジ ===== */
+/* ===== 4スチE�EタスシスチE��用バッジ ===== */
 .badge-pending {
     background-color: #fff3cd;
     color: #856404;
@@ -176,7 +176,34 @@
     border: 1px solid #e9ecef;
 }
 
-/* フィルタグループ�E送E*/
+/* 共通フォームコントロール（テンプレートで使う .form-control に対応） */
+.form-control {
+    padding: 0.75rem 1rem;
+    border: 2px solid #ced4da;
+    border-radius: 8px;
+    font-size: 0.9375rem;
+    background-color: white;
+    transition: all 0.16s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #0066cc;
+    box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.08);
+}
+
+/* フィルターボタン群（横並び → モバイル縦並び） */
+.filter-actions {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.filter-actions .btn {
+    min-width: 120px;
+}
+
+/* フィルタグループ�E送E*/
 .filter-group {
     display: flex;
     flex-direction: column;
@@ -190,7 +217,7 @@
     letter-spacing: 0.3px;
 }
 
-/* 検索バ�E�E�最優先�E配置�E�E*/
+/* 検索バ�E�E�最優先�E配置�E�E*/
 .filter-search-primary {
     grid-column: 1 / -1;
 }
@@ -221,7 +248,7 @@
     color: #adb5bd;
 }
 
-/* スチE�Eタスフィルタ */
+/* スチE�Eタスフィルタ */
 .filter-status {
     grid-column: 1 / -1;
 }
@@ -267,7 +294,7 @@
     color: #0066cc;
 }
 
-/* 日付篁E��フィルタ�E�視覚的にグループ化�E�E*/
+/* 日付篁E��フィルタ�E�視覚的にグループ化�E�E*/
 .filter-date-range {
     grid-column: 1 / -1;
 }
@@ -312,7 +339,7 @@
     flex-shrink: 0;
 }
 
-/* ソート頁E��アクション */
+/* ソート頁E��アクション */
 @media (min-width: 768px) {
     .filter-section {
         grid-template-columns: repeat(2, 1fr);
@@ -351,7 +378,7 @@
     }
 }
 
-/* セレクト�E通スタイル */
+/* セレクト�E通スタイル */
 .filter-select,
 .filter-input {
     padding: 0.625rem 1rem;
@@ -399,7 +426,7 @@
     transform: translateY(0);
 }
 
-/* リセチE��ボタン */
+/* リセチE��ボタン */
 .btn-reset {
     width: 100%;
     padding: 0.625rem 1.25rem;
@@ -413,7 +440,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* 検索結果惁E�� */
+/* 検索結果惁E�� */
 .search-results-info {
     display: flex;
     justify-content: space-between;
@@ -435,7 +462,7 @@
     color: #6c757d;
 }
 
-/* ===== 注斁E��ードグリチE�� ===== */
+/* ===== 注斁E��ードグリチE�� ===== */
 
 .orders-grid {
     display: grid;
@@ -444,7 +471,7 @@
     margin-bottom: 2rem;
 }
 
-/* ===== 注斁E��ーチE===== */
+/* ===== 注斁E��ーチE===== */
 
 .order-card {
     background: white;
@@ -486,7 +513,7 @@
     opacity: 0.8;
 }
 
-/* カード�EチE��ー */
+/* カード�EチE��ー */
 .order-card-header {
     display: flex;
     justify-content: space-between;
@@ -506,7 +533,7 @@
     color: #2c3e50;
 }
 
-/* カード�EチE�� */
+/* カード�EチE�� */
 .order-card-body {
     padding: 1.25rem;
 }
@@ -564,7 +591,7 @@
     font-weight: 700;
 }
 
-/* カードフチE��ー */
+/* カードフチE��ー */
 .order-card-footer {
     padding: 1rem 1.25rem;
     background-color: #f8f9fa;
@@ -640,7 +667,7 @@
     background-color: #5a6268;
 }
 
-/* ===== ローチE��ング ===== */
+/* ===== ローチE��ング ===== */
 
 .loading-container {
     display: flex;
@@ -811,7 +838,7 @@
     gap: 0.75rem;
 }
 
-/* モーダル冁E�E注斁E��細 */
+/* モーダル冁E�E注斁E��細 */
 .detail-section {
     margin-bottom: 1.5rem;
 }
@@ -851,7 +878,7 @@
     text-align: right;
 }
 
-/* ===== ト�Eスト通知 ===== */
+/* ===== ト�Eスト通知 ===== */
 
 .toast-container {
     position: fixed;
@@ -995,7 +1022,7 @@
         grid-column: 1 / -1;
     }
 
-    /* チェチE��ボックスは横並びを維持E*/
+    /* チェチE��ボックスは横並びを維持E*/
     .checkbox-group {
         gap: 0.5rem;
     }
@@ -1005,7 +1032,7 @@
         font-size: 0.8125rem;
     }
 
-    /* 日付篁E�� - モバイルでも横並び */
+    /* 日付篁E�� - モバイルでも横並び */
     .date-range-wrapper {
         gap: 0.5rem;
     }
@@ -1018,14 +1045,14 @@
         font-size: 1rem;
     }
 
-    /* 検索結果惁E�� */
+    /* 検索結果惁E�� */
     .search-results-info {
         flex-direction: column;
         align-items: flex-start;
         gap: 0.5rem;
     }
 
-    /* ペ�Eジヘッダー */
+    /* ペ�Eジヘッダー */
     .store-orders-header {
         padding: 1rem;
     }
@@ -1058,7 +1085,7 @@
         justify-content: center;
     }
 
-    /* 注斁E��リチE�� */
+    /* 注斁E��リチE�� */
     .orders-grid {
         grid-template-columns: 1fr;
     }
@@ -1072,6 +1099,17 @@
         width: 100%;
     }
 
+    /* フィルターボタンを縦並びにしてボタン幅をフルに（モバイル） */
+    .filter-actions {
+        width: 100%;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .filter-actions .btn {
+        width: 100%;
+    }
+
     .filter-select {
         flex: 1;
     }
@@ -1082,7 +1120,7 @@
         max-height: 90vh;
     }
 
-    /* ト�EスチE*/
+    /* ト�EスチE*/
     .toast-container {
         right: 10px;
         left: 10px;
@@ -1104,7 +1142,7 @@
         padding: 1rem;
     }
     
-    /* 日付篁E�� - 縦並びに */
+    /* 日付篁E�� - 縦並びに */
     .date-range-wrapper {
         flex-direction: column;
         align-items: stretch;
@@ -1124,7 +1162,7 @@
         width: 100%;
     }
     
-    /* チェチE��ボックス - 2列グリチE��に */
+    /* チェチE��ボックス - 2列グリチE��に */
     .checkbox-group {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -1136,7 +1174,7 @@
         justify-content: center;
     }
 
-    /* 注斁E��リチE�� */
+    /* 注斁E��リチE�� */
     .orders-grid {
         gap: 1rem;
     }
@@ -1173,7 +1211,7 @@
     animation: fadeIn 0.3s ease-out;
 }
 
-/* ===== ユーチE��リチE�� ===== */
+/* ===== ユーチE��リチE�� ===== */
 
 .text-muted {
     color: #6c757d;
